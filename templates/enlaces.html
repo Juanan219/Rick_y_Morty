@@ -1,14 +1,83 @@
-<!DOCTYPE html>
-<html lang="es">
-	<head>
-		<title>Enlaces</title>
-		<meta charset="utf-8" />
-	</head>
+{% extends "base.html" %}
+{% block titulo %}
+<link rel="shortcut icon" href="https://pre00.deviantart.net/91aa/th/pre/i/2017/104/2/2/rick_and_morty__by_wazzaldorp-db5tayc.png" />
+<title>Rick y Morty</title>
+{% endblock %}
+{% block contenido %}
+	<header>
+		<h2>Enlaces:</h2>
+	</header>
+	<div class="row">
+		<div class="4u 12u(mobile)">
+			<section>
+				<a href="{{url_for('personajes')}}"><img src="http://avante.biz/wp-content/uploads/Rick-and-Morty-Wallpapers/Rick-and-Morty-Wallpapers-027.jpg" style="width: 300px"/></a>
+				<header>
+					<h3><strong><a href="{{url_for('personajes')}}">Personajes</a></strong></h3>
+				</header>
+			</section>
+		</div>
+		<div class="4u 12u(mobile)">
+		<section>
+			<a href="{{url_for('lugares')}}"><img src="https://pm1.narvii.com/6334/59c0af0ce8295295ca14c843a2cc614dec7cfb10_hq.jpg" style="height: 200px;width: 350px"/></a>
+			<header>
+				<h3><strong><a href="{{url_for('lugares')}}">Lugares</a></strong></h3>
+			</header>
+		</section>
+		</div>
+		<div class="4u 12u(mobile)">
+		<section>
+			<a href="{{url_for('episodios')}}"><img src="http://indiespace.com.mx/wp-content/uploads/2018/03/Run-The-Jewels-video.jpg" style="height: 200px;width: 350px"/></a>
+			<header>
+				<h3><a href="{{url_for('episodios')}}">Episodios</a></strong></h3>
+			</header>
+		</section>
+		</div>
+	</div>
+{% endblock %}
 
-	<body>
-		<header>
-			<h1>Enlaces:</h1>
-		</header>
-		<h2><a href="{{url_for('personajes')}}">Personajes</a></h2>
-	</body>
-</html>
+{% block contenido2 %}
+	<header>
+		<h2>Personajes Aleatorios:</h2>
+	</header>
+	<div class="row">
+		<div class="4u 12u(mobile)">
+			<section>
+				<a href="/personajes/{{doc[0]['id']}}"><img src="https://rickandmortyapi.com/api/character/avatar/{{doc[0]['id']}}.jpeg"/></a>
+				<header>
+					<h3><strong><a href="/personajes/{{doc[0]['id']}}">{{doc[0]["name"]}}</a></strong></h3>
+				</header>
+				<p><strong>Estado:</strong> {{doc[0]["status"]}}<br/>
+				<strong>Especie:</strong> {{doc[0]["species"]}}<br/>
+				<strong>Género:</strong> {{doc[0]["gender"]}}<br/>
+				<strong>Origen:</strong> {{doc[0]["origin"]["name"]}}<br/>
+				<strong>Última vez visto en:</strong> {{doc[0]["location"]["name"]}}</p>
+			</section>
+		</div>
+		<div class="4u 12u(mobile)">
+			<section>
+				<a href="/personajes/{{doc[1]['id']}}"><img src="https://rickandmortyapi.com/api/character/avatar/{{doc[1]['id']}}.jpeg"/></a>
+				<header>
+					<h3><strong><a href="/personajes/{{doc[1]['id']}}">{{doc[1]["name"]}}</a></strong></h3>
+				</header>
+				<p><strong>Estado:</strong> {{doc[1]["status"]}}<br/>
+				<strong>Especie:</strong> {{doc[1]["species"]}}<br/>
+				<strong>Género:</strong> {{doc[1]["gender"]}}<br/>
+				<strong>Origen:</strong> {{doc[1]["origin"]["name"]}}<br/>
+				<strong>Última vez visto en:</strong> {{doc[1]["location"]["name"]}}</p>
+			</section>
+		</div>
+		<div class="4u 12u(mobile)">
+			<section>
+				<a href="/personajes/{{doc[2]['id']}}"><img src="https://rickandmortyapi.com/api/character/avatar/{{doc[2]['id']}}.jpeg"/></a>
+				<header>
+					<h3><strong><a href="/personajes/{{doc[2]['id']}}">{{doc[2]["name"]}}</a></strong></h3>
+				</header>
+				<p><strong>Estado:</strong> {{doc[2]["status"]}}<br/>
+				<strong>Especie:</strong> {{doc[2]["species"]}}<br/>
+				<strong>Género:</strong> {{doc[2]["gender"]}}<br/>
+				<strong>Origen:</strong> {{doc[2]["origin"]["name"]}}<br/>
+				<strong>Última vez visto en:</strong> {{doc[2]["location"]["name"]}}</p>
+			</section>
+		</div>
+	</div>
+{% endblock %}

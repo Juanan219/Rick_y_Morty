@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block titulo %}
+<link rel="shortcut icon" href="https://pre00.deviantart.net/91aa/th/pre/i/2017/104/2/2/rick_and_morty__by_wazzaldorp-db5tayc.png" />
+<title>Episodio {{datos["id"]}}:{{datos["name"]}}</title>
+{% endblock %}
+{% block contenido %}
+	<header>
+	<h1><font size=10>{{datos["name"]}}:</font></h1>
+	</header>
+	<div class="row">
+		<div class="4u 12u(mobile)">
+			<section>
+				<img src="{{datos["image"]}}"/></p>
+			</section>
+		</div>
+		<div class="4u 12u(mobile)">
+			<section>
+				<p>
+					<strong>Lanzamiento:</strong>{{datos["air_date"]}}
+				</p>
+				<p>
+					<font size=5><strong>Personajes:</strong></font>
+					{% for a in epiurl %}
+						<br/>
+						<a href="/personajes/{{a[1]}}">{{a[0]}}</a>
+					{% endfor %}
+				</p>
+			</section>
+		</div>
+{% endblock %}
