@@ -1,6 +1,8 @@
 from flask import Flask, render_template, url_for
 import requests
 from random import randint
+import os
+port = os.environ['PORT']
 app = Flask(__name__)
 
 @app.route('/')
@@ -145,4 +147,4 @@ def episodio_individual(id):
 	return render_template("episodio_individual.html",datos=doc,epiurl=episodio_url)
 
 if __name__ == '__main__':
-	app.run(debug=True)
+	app.run('0.0.0.0',int(port), debug=True)
