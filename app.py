@@ -146,5 +146,5 @@ def episodio_individual(id):
 	return render_template("episodio_individual.html",datos=doc,epiurl=episodio_url)
 
 if __name__ == '__main__':
-	port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+	port=os.environ["PORT"]
+	app.run('0.0.0.0',int(port), debug=True)
