@@ -23,7 +23,7 @@ def enlaces():
 		if r.status_code == 200:
 			doc = r.json()
 			personaje.append(doc)
-	return render_template("enlaces.html",doc=personaje)
+	return render_template("enlaces.html",doc=personaje,frase=frase)
 
 @app.route('/personajes')
 def personajes():
