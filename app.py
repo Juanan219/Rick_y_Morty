@@ -11,7 +11,7 @@ def base():
 	aleatorio2 = str(randint(0,len(frases)-1))
 	for a in str(aleatorio2):
 		frase = frases[int(a)]
-	return render_template("base.html"frase=frase)
+	return render_template("base.html",frase=frase)
 
 @app.route('/')
 def enlaces():
