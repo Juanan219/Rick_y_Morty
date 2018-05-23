@@ -11,7 +11,7 @@ def enlaces():
 	personaje = []
 	nombreid = []
 	nombre_id = []
-	frases = ["Escucha, Morty. Lamento decirlo, pero lo que la gente llama 'amor' es sólo una reacción química que motiva a los animales a aparearse. Es un golpe duro, Morty, y lentamente se desvanece dejándote varado en un matrimonio fallido. Yo lo hice. Tus padres lo harán. Rompe el ciclo, Morty. Álzate por encima. Enfócate en la ciencia"]
+	frases = ["Lamento decirlo, pero lo que la gente llama 'amor' es sólo una reacción química que motiva a los animales a aparearse. Es un golpe duro, y lentamente se desvanece dejándote varado en un matrimonio fallido. Yo lo hice. Tus padres lo harán. Rompe el ciclo. Álzate por encima. Enfócate en la ciencia."]
 	
 	for a in range(1,4):
 		aleatorio.append(randint(1,461))
