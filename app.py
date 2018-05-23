@@ -12,7 +12,7 @@ def enlaces():
 	nombreid = []
 	nombre_id = []
 	frases = ["Lamento decirlo, pero lo que la gente llama 'amor' es sólo una reacción química que motiva a los animales a aparearse. Es un golpe duro, y lentamente se desvanece dejándote varado en un matrimonio fallido. Yo lo hice. Tus padres lo harán. Rompe el ciclo. Álzate por encima. Enfócate en la ciencia.	-Rick Sanchez-", "A veces la ciencia es más arte que ciencia. Mucha gente no lo entiende. -Rick Sanchez-", "Científicamente hablando, las tradiciones son estúpidas", "Las bodas son básicamente funerales con pastel. Si quisiera ver a alguien desperdiciar su vida, me pasaría todo el día con Jerry. -Rick Sanchez-", "No existe Dios, Summer. Tuve que arrancar esa tirita ahora. Me lo agradecerás después. -Rick Sanchez-", "¡Wubba lubba dub dub! (Estoy sufriendo, por favor ayúdenme) -Rick Sanchez-"]
-	aleatorio2 = randint(1,len(frases)+1)
+	aleatorio2 = str(randint(0,len(frases)-1))
 	
 	for a in range(1,4):
 		aleatorio.append(randint(1,461))
