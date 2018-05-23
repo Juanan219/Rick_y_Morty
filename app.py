@@ -4,6 +4,15 @@ import requests
 from random import randint
 
 app = Flask(__name__)
+
+@app.route()
+def base():
+	frases = ["Lamento decirlo, pero lo que la gente llama 'amor' es sólo una reacción química que motiva a los animales a aparearse. Es un golpe duro, y lentamente se desvanece dejándote varado en un matrimonio fallido. Yo lo hice. Tus padres lo harán. Rompe el ciclo. Álzate por encima. Enfócate en la ciencia. -Rick Sanchez-", "A veces la ciencia es más arte que ciencia. Mucha gente no lo entiende. -Rick Sanchez-", "Científicamente hablando, las tradiciones son estúpidas. -Rick Sanchez-", "Las bodas son básicamente funerales con pastel. Si quisiera ver a alguien desperdiciar su vida, me pasaría todo el día con Jerry. -Rick Sanchez-", "No existe Dios, Summer. Tuve que arrancar esa tirita ahora. Me lo agradecerás después. -Rick Sanchez-", "¡Wubba lubba dub dub! (Estoy sufriendo, por favor ayúdenme) -Rick Sanchez-"]
+	aleatorio2 = str(randint(0,len(frases)-1))
+	for a in str(aleatorio2):
+		frase = frases[int(a)]
+	return render_template("base.html"frase=frase)
+
 @app.route('/')
 def enlaces():
 	aleatorio = []
@@ -11,10 +20,6 @@ def enlaces():
 	personaje = []
 	nombreid = []
 	nombre_id = []
-	frases = ["Lamento decirlo, pero lo que la gente llama 'amor' es sólo una reacción química que motiva a los animales a aparearse. Es un golpe duro, y lentamente se desvanece dejándote varado en un matrimonio fallido. Yo lo hice. Tus padres lo harán. Rompe el ciclo. Álzate por encima. Enfócate en la ciencia. -Rick Sanchez-", "A veces la ciencia es más arte que ciencia. Mucha gente no lo entiende. -Rick Sanchez-", "Científicamente hablando, las tradiciones son estúpidas. -Rick Sanchez-", "Las bodas son básicamente funerales con pastel. Si quisiera ver a alguien desperdiciar su vida, me pasaría todo el día con Jerry. -Rick Sanchez-", "No existe Dios, Summer. Tuve que arrancar esa tirita ahora. Me lo agradecerás después. -Rick Sanchez-", "¡Wubba lubba dub dub! (Estoy sufriendo, por favor ayúdenme) -Rick Sanchez-"]
-	aleatorio2 = str(randint(0,len(frases)-1))
-	for a in str(aleatorio2):
-		frase = frases[int(a)]
 	
 	for a in range(1,4):
 		aleatorio.append(randint(1,461))
@@ -23,7 +28,7 @@ def enlaces():
 		if r.status_code == 200:
 			doc = r.json()
 			personaje.append(doc)
-	return render_template("enlaces.html",doc=personaje,frase=frase)
+	return render_template("enlaces.html",doc=personaje)
 
 @app.route('/personajes')
 def personajes():
