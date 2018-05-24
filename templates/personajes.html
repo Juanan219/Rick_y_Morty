@@ -8,9 +8,11 @@
 		<header>
 			<h1 id="titulo">Personajes</h1>
 		</header>
+		<p id="contenido_general">
 		{% for a in nombre_id_2 %}
 			<br/>
-			<a id="contenido_general" href="{{url_for('personaje_individual',id=a[1])}}">{{a[0]}}</a>
-		{% endfor %}							
+			<a href="{{url_for('personaje_individual',id=a[1])}}">{{a[0]}}</a>
+		{% endfor %}
+		</p>							
 	</article>
 {% endblock %}
