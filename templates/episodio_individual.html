@@ -14,8 +14,8 @@
 			<p>
 				<strong>Lanzamiento:</strong>{{datos["air_date"]}}
 			</p>
-			<p>
-				<font size=5><strong>Personajes:</strong></font>
+			<h1 id="titulo_general"><strong>Personajes:</strong></h1>
+			<p id="contenido_general">
 				{% for a in epiurl %}
 					<br/>
 					<a href="/personajes/{{a[1]}}">{{a[0]}}</a>
