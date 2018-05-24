@@ -8,9 +8,11 @@
 		<header>
 			<h1 id="titulo">Lugares</h1>
 		</header>
+		<p id="contenido_general">
 		{% for a in nomid %}
+			<br/>
 			<a href="/lugares/{{a[1]}}">{{a[0]}}</a>
-			<br>
-		{% endfor %}						
+		{% endfor %}
+		</p>					
 	</article>
 {% endblock %}
