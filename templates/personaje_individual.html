@@ -5,16 +5,16 @@
 {% endblock %}
 {% block contenido %}
 	<header>
-	<h1><font size=10>{{datos["name"]}}:</font></h1>
+	<h1 id="titulo">{{datos["name"]}}:</h1>
 	</header>
 	<div class="row">
 		<div class="4u 12u(mobile)">
-			<section>
-				<img src="{{datos["image"]}}"/></p>
-			</section>
+			<div>
+				<img src="{{datos["image"]}}" alt=""/>
+			</div>
 		</div>
 		<div class="4u 12u(mobile)">
-			<section>
+			<div>
 				<p><strong>Especie:</strong> {{datos["species"]}}<br/>
 					<strong>Género:</strong> {{datos["gender"]}}<br/>
 					<strong>Tipo:</strong> {{datos["type"]}}<br/>
@@ -28,16 +28,16 @@
 						<a href="/lugares/{{a[1]}}">{{a[0]}}</a>
 					{% endfor %}
 				</p>
-			</section>
+			</div>
 		</div>
 		<div class="4u 12u(mobile)">
-			<section>
+			<div>
 				<p><font size=5><strong>Episodios:<br/></strong></font>
 					{% for a in nomepi %}
 						<strong>{{a[1]}}:</strong> <a href="/episodios/{{a[1]}}">{{a[0]}}</a>
 						<br/>
 					{% endfor %}
 				</p>
-			</section>
+			</div>
 		</div>
 {% endblock %}
