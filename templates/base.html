@@ -12,92 +12,89 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" type="text/css" href="../static/css/main.css">
 	</head>
-	<body class="homepage">
-		<div id="page-wrapper">
-
 			<!-- Header -->
-				<div id="header-wrapper">
-					<div id="header" class="container" style="padding-top: 0px;padding-bottom: 40px;">
-						<a href="{{url_for('enlaces')}}"><img src="https://www.firstcomicsnews.com/wp-content/uploads/2017/09/Rick-and-Morty-logo-600x257.png" style="width: 600px" alt=""></a>
-						<p>{{frase}}</p>
-					</div>
-				</div>
-			<!-- Features -->
-				<div id="features-wrapper" style="padding-top: 0px;padding-bottom: 30px">
-					<div id="features" class="container">
-						{% block contenido %}{% endblock %}
-						{% block contenido2 %}{% endblock %}
-					</div>
-				</div>
-			<!-- Footer -->
-				<div id="footer-wrapper">
-					<div id="footer" class="container">
-						<header>
-                            <h2><strong>Contacto:</strong></h2>
-						</header>
-						<div class="row">
+	<div id="header-wrapper">
+		<div id="header" class="container" style="padding-top: 0px;padding-bottom: 40px;">
+			<a href="{{url_for('enlaces')}}"><img src="https://www.firstcomicsnews.com/wp-content/uploads/2017/09/Rick-and-Morty-logo-600x257.png" style="width: 600px" alt=""></a>
+			<p>{{frase}}</p>
+		</div>
+	</div>
+<!-- Features -->
+	<div id="features-wrapper" style="padding-top: 0px;padding-bottom: 30px">
+		<div id="features" class="container">
+			{% block contenido %}{% endblock %}
+			{% block contenido2 %}{% endblock %}
+		</div>
+	</div>
+<!-- Footer -->
+	<div id="footer-wrapper">
+		<div id="footer" class="container">
+			<header>
+                         <h2><strong>Contacto:</strong></h2>
+			</header>
+			<div class="row">
+				<div class="6u 12u(mobile)">
+					<form method="post" action="http://www.gonzalonazareno.org/josedom/resultado.php">
+						<div class="row 50%">
 							<div class="6u 12u(mobile)">
-								<form method="post" action="http://www.gonzalonazareno.org/josedom/resultado.php">
-									<div class="row 50%">
-										<div class="6u 12u(mobile)">
-											<input name="name" placeholder="Nombre" type="text" />
-										</div>
-										<div class="6u 12u(mobile)">
-											<input name="email" placeholder="Correo" type="text" />
-										</div>
-									</div>
-									<div class="row 50%">
-										<div class="12u">
-											<textarea name="message" placeholder="Mensaje"></textarea>
-										</div>
-									</div>
-									<div class="row 50%">
-										<div class="12u">
-											<input type="submit" value="Enviar"/>
-										</div>
-									</div>
-								</form>
+								<input name="name" placeholder="Nombre" type="text" />
 							</div>
 							<div class="6u 12u(mobile)">
-								<div class="row">
-									<div class="6u 12u(mobile)">
-										<ul class="icons">
-											<li class="icon fa-home">
-												<p>Mi casa XD</p>
-											</li>
-											<li class="icon fa-phone">
-												<p>Mi telefono</p>
-											</li>
-											<li class="icon fa-envelope">
-												<p>mi@correo.es</p>
-											</li>
-										</ul>
-									</div>
-									<div class="6u 12u(mobile)">
-										<ul class="icons">
-											<li class="icon fa-twitter">
-												<a href="https://twitter.com/juananveintidi">@juananveintidi</a>
-											</li>
-											<li class="icon fa-instagram">
-												<a href="https://www.instagram.com/juananveintidi/">instagram.com/juananveintidi</a>
-											</li>
-											<li class="icon fa-facebook">
-												<a href="https://www.facebook.com/juanantonio.reifsramirez">facebook.com/untitled-tld</a>
-											</li>
-										</ul>
-									</div>
-								</div>
+								<input name="email" placeholder="Correo" type="text" />
 							</div>
 						</div>
-					</div>
-					<div id="copyright" class="container">
-						<ul class="links">
-							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
+						<div class="row 50%">
+							<div class="12u">
+								<textarea name="message" placeholder="Mensaje"></textarea>
+							</div>
+						</div>
+						<div class="row 50%">
+							<div class="12u">
+								<input type="submit" value="Enviar"/>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="6u 12u(mobile)">
+					<div class="row">
+						<div class="6u 12u(mobile)">
+							<ul class="icons">
+								<li class="icon fa-home">
+									<p>Mi casa XD</p>
+								</li>
+								<li class="icon fa-phone">
+									<p>Mi telefono</p>
+								</li>
+								<li class="icon fa-envelope">
+									<p>mi@correo.es</p>
+								</li>
+							</ul>
+						</div>
+						<div class="6u 12u(mobile)">
+							<ul class="icons">
+								<li class="icon fa-twitter">
+									<a href="https://twitter.com/juananveintidi">@juananveintidi</a>
+								</li>
+								<li class="icon fa-instagram">
+									<a href="https://www.instagram.com/juananveintidi/">instagram.com/juananveintidi</a>
+								</li>
+								<li class="icon fa-facebook">
+									<a href="https://www.facebook.com/juanantonio.reifsramirez">facebook.com/untitled-tld</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-
+			</div>
 		</div>
+		<div id="copyright" class="container">
+			<ul class="links">
+				<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</div>
+
+
 
 		<!-- Scripts -->
 			<script src="../static/js/jquery.min.js"></script>
