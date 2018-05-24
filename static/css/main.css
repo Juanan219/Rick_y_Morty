@@ -1183,6 +1183,10 @@
 		clear: both;
 	}
 
+	#titulo {
+		font-size: 10px;
+	}
+
 /* Sections/Article */
 
 	section, article {
