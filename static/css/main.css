@@ -1195,6 +1195,10 @@
 		font-size: 15px;
 	}
 
+	#titulo_general {
+		font-size: 25px;
+	}
+
 /* Sections/Article */
 
 	section, article {
