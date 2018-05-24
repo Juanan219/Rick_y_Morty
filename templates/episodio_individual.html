@@ -11,17 +11,15 @@
 		<div class="4u 12u(mobile)">
 		</div>
 		<div class="4u 12u(mobile)">
-			<div>
-				<p>
-					<strong>Lanzamiento:</strong>{{datos["air_date"]}}
-				</p>
-				<p>
-					<font size=5><strong>Personajes:</strong></font>
-					{% for a in epiurl %}
-						<br/>
-						<a href="/personajes/{{a[1]}}">{{a[0]}}</a>
-					{% endfor %}
-				</p>
-			</div>
+			<p>
+				<strong>Lanzamiento:</strong>{{datos["air_date"]}}
+			</p>
+			<p>
+				<font size=5><strong>Personajes:</strong></font>
+				{% for a in epiurl %}
+					<br/>
+					<a href="/personajes/{{a[1]}}">{{a[0]}}</a>
+				{% endfor %}
+			</p>
 		</div>
 {% endblock %}
