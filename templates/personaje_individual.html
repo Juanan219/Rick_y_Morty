@@ -21,8 +21,8 @@
 					<strong>Estado:</strong> {{datos["status"]}}<br/>
 					<strong>Origen:</strong> {{datos["origin"]["name"]}}<br/>
 				</p>
-				<p>
-					<font size=5><strong>Última vez visto en:</strong></font>
+				<p id="contenido_general">
+					<strong>Última vez visto en:</strong>
 					{% for a in lugid %}
 						<br/>
 						<a href="/lugares/{{a[1]}}">{{a[0]}}</a>
@@ -32,7 +32,7 @@
 		</div>
 		<div class="4u 12u(mobile)">
 			<div>
-				<p><font size=5><strong>Episodios:<br/></strong></font>
+				<p id="contenido_general"><strong>Episodios:<br/></strong>
 					{% for a in nomepi %}
 						<strong>{{a[1]}}:</strong> <a href="/episodios/{{a[1]}}">{{a[0]}}</a>
 						<br/>
